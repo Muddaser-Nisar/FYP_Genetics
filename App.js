@@ -1,8 +1,3 @@
-// import MainScreen from './MainScreen';//ya kya krti hayis ne main index display karna jo jo project kaam karay ga
-// import Adenine from './Screens/Adenine';
-// import DNAScreen from './DNAScreen';
-// import Heredity from './Screens/Heredity';
-
 import React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
@@ -12,6 +7,8 @@ import DNA from './src/screens/DNA';
 import Heredity from './src/screens/Heredity';
 import Genes from './src/screens/Genes';
 import Adenine from './src/screens/Adenine';
+import ChromosomeDetails from './src/screens/ChromosomeDetails';
+
 // import AddStudentsScreen from './src/Screens/AddStudent';
 
 const Stack = createStackNavigator();
@@ -93,6 +90,17 @@ const App = () => {
           component={Adenine}
           options={{
             title: 'Adenine',
+            headerTitleStyle: {
+              alignSelf: 'flex-start',
+              justifyContent: 'center',
+            },
+          }}
+        />
+        <Stack.Screen
+          name="ChromosomeDetails"
+          component={ChromosomeDetails}
+          options={{
+            title: 'Chromosome Details',
             headerTitleStyle: {
               alignSelf: 'flex-start',
               justifyContent: 'center',
